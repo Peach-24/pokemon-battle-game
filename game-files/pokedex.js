@@ -5,7 +5,8 @@ const pokedex = {
     def: 49,
     speed: 45,
     type: "grass",
-    moves: ["tackle", "growl"],
+    moves: ["tackle"],
+    sound: "Bulbaa!",
   },
   charmander: {
     hp: 39,
@@ -13,7 +14,8 @@ const pokedex = {
     def: 43,
     speed: 65,
     type: "fire",
-    moves: ["scratch", "growl"],
+    moves: ["scratch"],
+    sound: "Charr!",
   },
   squirtle: {
     hp: 44,
@@ -21,6 +23,7 @@ const pokedex = {
     def: 65,
     speed: 43,
     type: "water",
-    moves: ["tackle", "tail whip"],
+    moves: ["tackle"],
+    sound: "Squirr!",
   },
 };
