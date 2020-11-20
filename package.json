@@ -1,0 +1,26 @@
+{
+  "name": "pokemon-battle-game",
+  "version": "1.0.0",
+  "description": "A Pokémon battle game that makes use of object-oriented programming, classes, and inquirer.js to emulate the beginning of the iconic Pokemon game (Gen 1).",
+  "main": "app.js",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.6.3",
+    "node": "^15.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Peach-24/pokemon-battle-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Peach-24/pokemon-battle-game/issues"
+  },
+  "homepage": "https://github.com/Peach-24/pokemon-battle-game#readme"
+}
