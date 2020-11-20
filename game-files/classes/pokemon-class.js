@@ -20,6 +20,10 @@ class Pokemon {
     } else {
       this.type = "normal";
     }
+
+    if (this.hp === 0) {
+      this.isConscious = false;
+    }
   }
   talk() {
     return this.sound;
