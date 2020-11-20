@@ -5,9 +5,9 @@ const pokedex = {
     att: 49,
     def: 49,
     speed: 45,
-    type: "grass",
-    moves: ["tackle"],
     sound: "Bulbaa!",
+    moves: ["tackle"],
+    type: "grass",
   },
   charmander: {
     name: "charmander",
@@ -15,9 +15,9 @@ const pokedex = {
     att: 52,
     def: 43,
     speed: 65,
-    type: "fire",
-    moves: ["scratch"],
     sound: "Charr!",
+    moves: ["scratch"],
+    type: "fire",
   },
   squirtle: {
     name: "squirtle",
@@ -25,9 +25,9 @@ const pokedex = {
     att: 48,
     def: 65,
     speed: 43,
-    type: "water",
-    moves: ["tackle"],
     sound: "Squirr!",
+    moves: ["tackle"],
+    type: "water",
   },
 };
 

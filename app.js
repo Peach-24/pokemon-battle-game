@@ -24,8 +24,8 @@ class Pokemon {
   talk() {
     return this.sound;
   }
-  useYourMoves() {
-    return this.move;
+  showMoves() {
+    return this.moves;
   }
 }
 

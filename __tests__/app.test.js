@@ -1,5 +1,6 @@
-const { expect, test } = require("@jest/globals");
+const { expect, test, describe } = require("@jest/globals");
 const { Pokemon } = require("../app.js");
+const pokedex = require("../game-files/pokedex");
 
 describe("Pokemon constructor", () => {
   test("returns an object", () => {
@@ -47,6 +48,44 @@ describe("Pokemon constructor", () => {
       const testPokemon = new Pokemon();
       expect(testPokemon).toHaveProperty("type");
       expect(testPokemon.effectiveness).toBe(1);
+    });
+  });
+  describe.only("METHODS", () => {
+    test("has a talk method", () => {
+      const testPokemon = new Pokemon();
+      expect("talk" in testPokemon).toBe(true);
+      expect("scream" in testPokemon).toBe(false);
+    });
+    test("talk method returns the pokemon sound", () => {
+      const testPokemon = new Pokemon(
+        "bulbasaur",
+        45,
+        49,
+        49,
+        45,
+        "Bulbaa!",
+        ["tackle"],
+        "grass"
+      );
+      expect(testPokemon.talk()).toBe("Bulbaa!");
+    });
+    test("has a showMoves method", () => {
+      const testPokemon = new Pokemon();
+      expect("showMoves" in testPokemon).toBe(true);
+      expect("useMoves" in testPokemon).toBe(false);
+    });
+    test("showMoves method returns the pokemon's moves", () => {
+      const testPokemon = new Pokemon(
+        "bulbasaur",
+        45,
+        49,
+        49,
+        45,
+        "Bulbaa!",
+        ["tackle", "growl"],
+        "grass"
+      );
+      expect(testPokemon.showMoves()).toEqual(["tackle", "growl"]);
     });
   });
 });
