@@ -29,4 +29,23 @@ class Pokemon {
   }
 }
 
-module.exports = { Pokemon };
+class GrassPokemon extends Pokemon {
+  constructor(name, hp, att, def, speed, sound, moves) {
+    super(name, hp, att, def, speed, sound, moves);
+    this.type = "grass";
+  }
+}
+class FirePokemon extends Pokemon {
+  constructor(name, hp, att, def, speed, sound, moves) {
+    super(name, hp, att, def, speed, sound, moves);
+    this.type = "fire";
+  }
+}
+class WaterPokemon extends Pokemon {
+  constructor(name, hp, att, def, speed, sound, moves) {
+    super(name, hp, att, def, speed, sound, moves);
+    this.type = "water";
+  }
+}
+
+module.exports = { Pokemon, GrassPokemon, FirePokemon, WaterPokemon };

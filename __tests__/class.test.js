@@ -1,5 +1,10 @@
 const { expect, test, describe } = require("@jest/globals");
-const { Pokemon } = require("../game-files/classes/pokemon-class.js");
+const {
+  Pokemon,
+  GrassPokemon,
+  FirePokemon,
+  WaterPokemon,
+} = require("../game-files/classes/pokemon-class.js");
 const { Trainer } = require("../game-files/classes/trainer-class");
 const pokedex = require("../game-files/pokedex.js");
 
@@ -87,6 +92,26 @@ describe("Pokemon constructor", () => {
         "grass"
       );
       expect(testPokemon.showMoves()).toEqual(["tackle", "growl"]);
+    });
+  });
+  describe("Pokemon TYPE constructors", () => {
+    test('GrassPokemon should create an instance of a pokemon with type === "grass"', () => {
+      const testGrass = new GrassPokemon("leaf", 10, 10, 10, 10, "leaa", [
+        "fall",
+      ]);
+      expect(testGrass.type).toBe("grass");
+    });
+    test('FirePokemon should create an instance of a pokemon with type === "fire"', () => {
+      const testFire = new FirePokemon("Coal", 10, 10, 10, 10, "burr", [
+        "fall",
+      ]);
+      expect(testFire.type).toBe("fire");
+    });
+    test('WaterPokemon should create an instance of a pokemon with type === "water"', () => {
+      const testWater = new WaterPokemon("pool", 10, 10, 10, 10, "splaa", [
+        "fall",
+      ]);
+      expect(testWater.type).toBe("water");
     });
   });
 });
