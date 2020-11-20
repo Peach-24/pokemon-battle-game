@@ -1,6 +1,6 @@
 const pokedex = {
   bulbasaur: {
-    name: "bulbasaur",
+    name: "Bulbasaur",
     hp: 45,
     att: 49,
     def: 49,
@@ -9,8 +9,9 @@ const pokedex = {
     moves: ["tackle"],
     type: "grass",
   },
+
   charmander: {
-    name: "charmander",
+    name: "Charmander",
     hp: 39,
     att: 52,
     def: 43,
@@ -19,8 +20,9 @@ const pokedex = {
     moves: ["scratch"],
     type: "fire",
   },
+
   squirtle: {
-    name: "squirtle",
+    name: "Squirtle",
     hp: 44,
     att: 48,
     def: 65,

@@ -1,6 +1,6 @@
 const { effectiveness } = require("../game-files/types");
 
-it("Returns the correct multipliers from the(effectiveness", () => {
+test("Returns the correct multipliers from the(effectiveness", () => {
   expect(effectiveness["normal"]["fire"]).toBe(1);
   expect(effectiveness["normal"]["water"]).toBe(1);
   expect(effectiveness["normal"]["grass"]).toBe(1);
