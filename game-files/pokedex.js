@@ -1,5 +1,6 @@
 const pokedex = {
   bulbasaur: {
+    name: "bulbasaur",
     hp: 45,
     att: 49,
     def: 49,
@@ -9,6 +10,7 @@ const pokedex = {
     sound: "Bulbaa!",
   },
   charmander: {
+    name: "charmander",
     hp: 39,
     att: 52,
     def: 43,
@@ -18,6 +20,7 @@ const pokedex = {
     sound: "Charr!",
   },
   squirtle: {
+    name: "squirtle",
     hp: 44,
     att: 48,
     def: 65,
@@ -27,3 +30,5 @@ const pokedex = {
     sound: "Squirr!",
   },
 };
+
+module.exports = pokedex;
