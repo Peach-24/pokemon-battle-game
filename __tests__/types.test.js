@@ -1,20 +1,20 @@
-const { effectiveness } = require("../game-files/types");
+const { effectivenessRef } = require("../game-files/types");
 
-test("Returns the correct multipliers from the(effectiveness", () => {
-  expect(effectiveness["normal"]["fire"]).toBe(1);
-  expect(effectiveness["normal"]["water"]).toBe(1);
-  expect(effectiveness["normal"]["grass"]).toBe(1);
-  expect(effectiveness["normal"]["normal"]).toBe(1);
-  expect(effectiveness["fire"]["water"]).toBe(0.5);
-  expect(effectiveness["fire"]["grass"]).toBe(1.5);
-  expect(effectiveness["fire"]["fire"]).toBe(1);
-  expect(effectiveness["fire"]["normal"]).toBe(1);
-  expect(effectiveness["water"]["fire"]).toBe(1.5);
-  expect(effectiveness["water"]["water"]).toBe(1);
-  expect(effectiveness["water"]["grass"]).toBe(0.5);
-  expect(effectiveness["water"]["normal"]).toBe(1);
-  expect(effectiveness["grass"]["fire"]).toBe(0.5);
-  expect(effectiveness["grass"]["water"]).toBe(1.5);
-  expect(effectiveness["grass"]["grass"]).toBe(1);
-  expect(effectiveness["grass"]["normal"]).toBe(1);
+test("Returns the correct multipliers from the effectivenessRef", () => {
+  expect(effectivenessRef["normal"]["fire"]).toBe(1);
+  expect(effectivenessRef["normal"]["water"]).toBe(1);
+  expect(effectivenessRef["normal"]["grass"]).toBe(1);
+  expect(effectivenessRef["normal"]["normal"]).toBe(1);
+  expect(effectivenessRef["fire"]["water"]).toBe(0.5);
+  expect(effectivenessRef["fire"]["grass"]).toBe(1.5);
+  expect(effectivenessRef["fire"]["fire"]).toBe(1);
+  expect(effectivenessRef["fire"]["normal"]).toBe(1);
+  expect(effectivenessRef["water"]["fire"]).toBe(1.5);
+  expect(effectivenessRef["water"]["water"]).toBe(1);
+  expect(effectivenessRef["water"]["grass"]).toBe(0.5);
+  expect(effectivenessRef["water"]["normal"]).toBe(1);
+  expect(effectivenessRef["grass"]["fire"]).toBe(0.5);
+  expect(effectivenessRef["grass"]["water"]).toBe(1.5);
+  expect(effectivenessRef["grass"]["grass"]).toBe(1);
+  expect(effectivenessRef["grass"]["normal"]).toBe(1);
 });

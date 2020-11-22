@@ -9,13 +9,11 @@ const squirtle = starterPokemon[2];
 
 beforeEach(() => {
   ash = new Trainer("Ash");
-  charmander.hp = 39;
   ash.catchPokemon(charmander);
-
+  ash.team[0].hp = 39;
   gary = new Trainer("Gary");
-  bulbasaur.hp = 40;
   gary.catchPokemon(bulbasaur);
-
+  gary.team[0].hp = 40;
   testBattle = new Battle(ash, gary, ash.team, gary.team);
 });
 
@@ -41,54 +39,40 @@ test("Each time the fight method is called, turn increments", () => {
 
 test("When a fire type goes against a grass type, the effectivenessRef works correctly", () => {
   testBattle.fight();
-  console.log(testBattle);
   expect(effectivenessRef[charmander.type][bulbasaur.type]).toBe(1.5);
   testBattle.fight();
   expect(effectivenessRef[bulbasaur.type][charmander.type]).toBe(0.5);
 });
-
 test("When a pokemon attacks, the opposing pokemon's health is reduced accordingly,", () => {
-  //   expect(charmander.hp).toBe(39);
-  //   expect(bulbasaur.hp).toBe(40);
+  testBattle.fight();
+  expect(gary.team[0].hp).toBe(20.5);
 
   testBattle.fight();
-  expect(bulbasaur.hp).toBe(20.5);
 
+  console.log(testBattle.pokemon1, testBattle.pokemon2);
   testBattle.fight();
-  expect(charmander.hp).toBe(34);
+  testBattle.fight();
+  expect(ash.team[0].hp).toBe(29);
 });
 
-test("If defender's health reaches 0 or below, the attacker is declared the winner", () => {
+test("If a pokemon's hp reaches 0 or below, the is winner is declared", () => {
   const consoleSpy = jest.spyOn(console, "log");
 
   testBattle.fight();
   testBattle.fight();
   testBattle.fight();
   testBattle.fight();
+  //the below attack should reduce gary's bulbasaur's health to below zero
+  testBattle.fight();
   expect(consoleSpy).toHaveBeenCalledWith(
-    "charizard fainted... rattata has won the battle!"
+    "Bulbasaur fainted. Ash has won the battle!"
   );
 });
-test("fight method is only invoked if both the attacker & defender's health is above 0", () => {
-  testBattle.fight();
-  testBattle.fight();
-  testBattle.fight();
-  testBattle.fight();
-  expect(testBattle.attacker.health).toBe(0);
-  testBattle.fight();
-  expect(testBattle.defender.health).toBe(0);
-});
-
-test("A trainer is announced winner when the opponent runs out of alive pokemon (1 pokemon each)", () => {
+test("fight method is only invoked if pokemon1 and pokemon2 hp are both above 0", () => {
   const consoleSpy = jest.spyOn(console, "log");
-
-  const testBattle = new Battle(testTrainerAsh, testTrainerGary);
-  testBattle.fight();
+  ash.team[0].hp = 0;
   testBattle.fight();
   expect(consoleSpy).toHaveBeenCalledWith(
-    "charizard fainted... rattata has won the battle!"
-  );
-  expect(consoleSpy).toHaveBeenCalledWith(
-    "josh is out of usable pokemon... james wins!"
+    "There aren't enough usable Pokémon for this battle!"
   );
 });

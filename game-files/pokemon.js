@@ -8,7 +8,6 @@ class Pokemon {
     this.sound = sound;
     this.moves = moves;
     this.type = type;
-    this.effectiveness = 1;
 
     if (
       this.type === "fire" ||

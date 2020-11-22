@@ -34,11 +34,11 @@ describe("Pokemon constructor", () => {
       expect(testPokemon).toHaveProperty("type");
       expect(testPokemon.type).toBe("normal");
     });
-    test("has an effectiveness property", () => {
-      const testPokemon = new Pokemon();
-      expect(testPokemon).toHaveProperty("type");
-      expect(testPokemon.effectiveness).toBe(1);
-    });
+    // test("has an effectiveness property", () => {
+    //   const testPokemon = new Pokemon();
+    //   expect(testPokemon).toHaveProperty("type");
+    //   expect(testPokemon.effectiveness).toBe(1);
+    // });
   });
   describe("METHODS", () => {
     test("has a talk method", () => {
