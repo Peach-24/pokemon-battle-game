@@ -4,7 +4,7 @@ exports.types = ["normal", "fire", "water", "grass"];
 
 // effectiveness refObj against each other basic type
 
-exports.effectiveness = {
+exports.effectivenessRef = {
   normal: {
     normal: 1,
     fire: 1,

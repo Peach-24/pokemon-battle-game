@@ -1,10 +1,8 @@
-const pokedex = require("../pokedex");
-
 class Trainer {
   constructor(name = "Ash") {
     this.name = name;
     this.team = [];
-    this.chosenPokemon = this.team[0];
+    this.maxSize = 6;
   }
   catchPokemon(pokemon) {
     return this.team.push(pokemon);

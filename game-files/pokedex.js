@@ -1,10 +1,8 @@
 const pokedex = {
   bulbasaur: {
     name: "Bulbasaur",
-    hp: 45,
-    att: 49,
-    def: 49,
-    speed: 45,
+    hp: 40,
+    att: 10,
     sound: "Bulbaa!",
     moves: ["tackle"],
     type: "grass",
@@ -13,9 +11,7 @@ const pokedex = {
   charmander: {
     name: "Charmander",
     hp: 39,
-    att: 52,
-    def: 43,
-    speed: 65,
+    att: 13,
     sound: "Charr!",
     moves: ["scratch"],
     type: "fire",
@@ -24,9 +20,7 @@ const pokedex = {
   squirtle: {
     name: "Squirtle",
     hp: 44,
-    att: 48,
-    def: 65,
-    speed: 43,
+    att: 12,
     sound: "Squirr!",
     moves: ["tackle"],
     type: "water",
